@@ -14,5 +14,11 @@ public class GestorObra {
 	/*
 	 * public void adicionarObra(Obra o) { obras.add(o); }
 	 */
+	
+	/*
+	 * public Obra pesquisarTitulo (String titulo) { for (Obra o : obras) if
+	 * (o.getTitulo().equalsIgnoreCase(titulo)) { return o; }
+	 * System.out.println("Obra não encontrada"); return null; }
+	 */
 
 }
