@@ -49,10 +49,17 @@ public class Obra {
 	public void registarPintura(Pintura novaPintura) {
 		pinturas.add(novaPintura);
 	}
+	
 	public Arraylist<Escultura> getEsculturas(){
 		return esculturas;
 	}
+	
 	public void registarEscultura(Escultura novaEscultura) {
 		esculturas.add(novaEscultura);
 	}
+	@Override
+	public String toString() {
+		return "Obra [titulo=" + titulo + ", autor=" + autor + ", data=" + data + "]";
+	}
+	
 }
