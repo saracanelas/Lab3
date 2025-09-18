@@ -42,6 +42,17 @@ public class Obra {
 	public String getTitulo() {
 		return titulo;
 	}
+	public ArrayList<Pintura> getPinturas(){
+		return pinturas;
+	}
 	
-	
+	public void registarPintura(Pintura novaPintura) {
+		pinturas.add(novaPintura);
+	}
+	public Arraylist<Escultura> getEsculturas(){
+		return esculturas;
+	}
+	public void registarEscultura(Escultura novaEscultura) {
+		esculturas.add(novaEscultura);
+	}
 }
