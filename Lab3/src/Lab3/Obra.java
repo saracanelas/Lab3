@@ -23,7 +23,24 @@ public class Obra {
 		this.data = data;
 		pinturas = new ArrayList <Pintura>;
 		esculturas = new ArrayList <Escultura>;
-	
+	}
+	/**
+	 * @return the autor
+	 */
+	public String getAutor() {
+		return autor;
+	}
+	/**
+	 * @return the data
+	 */
+	public int getData() {
+		return data;
+	}
+	/**
+	 * @return the titulo
+	 */
+	public String getTitulo() {
+		return titulo;
 	}
 	
 	
