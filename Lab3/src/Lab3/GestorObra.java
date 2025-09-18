@@ -32,5 +32,12 @@ public class GestorObra {
 			  if (o.getAutor().equalsIgnoreCase(autor)) {
 				  return o;
 			  }
+		  return null;
 	  }
+	  
+	  public void imprimirDetalhes() {
+		  for (Obra o : obras)
+			  System.out.println(o);
+	  }
+	  
 }
