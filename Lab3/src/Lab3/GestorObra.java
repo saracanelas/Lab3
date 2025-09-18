@@ -27,5 +27,10 @@ public class GestorObra {
 	  return null; 
 	  }
 	 
-	  
+	  public Obra pesquisarAutor (String autor) {
+		  for (Obra o : obras)
+			  if (o.getAutor().equalsIgnoreCase(autor)) {
+				  return o;
+			  }
+	  }
 }
