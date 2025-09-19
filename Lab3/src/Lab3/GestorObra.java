@@ -40,15 +40,18 @@ public class GestorObra {
 			  System.out.println(o);
 	  }
 	  
-		/*
-		 * public void imprimirTela (String tipoTela) {
-		 * 
-		 * for (Obra o : obras) { if (o instanceof PinturaOleo) { if
-		 * (o.getTipoTela().equalsIgnoreCase(TipoTela)) { System.out.println("Título: "
-		 * + o.getTitulo() + "/nAutor: " + o.getAutor()); } } if (o !instanceof
-		 * PinturaOleo) {
-		 * System.out.println("não foi encontrada nenhuma Pintura do tipo: " +
-		 * tipoTela); } } }
-		 */
+		
+		  public void imprimirTela (String tipoTela) {
+		  
+		  for (Obra o : obras) { 
+			  if (o instanceof PinturaOleo) { 
+				  if (o.getTipoTela().equalsIgnoreCase(TipoTela)) { 
+					  System.out.println("Título: " + o.getTitulo() + "/nAutor: " + o.getAutor()); } } 
+			  if (o !instanceof PinturaOleo) {
+		  System.out.println("não foi encontrada nenhuma Pintura do tipo: " +  tipoTela); 
+			  	} 
+			  } 
+		  }
+		 
 	  
 }
