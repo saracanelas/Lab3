@@ -42,11 +42,13 @@ public class Obra {
 	public String getTitulo() {
 		return titulo;
 	}
+
 	
 	public void registarPintura(Pintura novaPintura) {
 		pinturas.add(novaPintura);
 	}
 	
+
 	public void registarEscultura(Escultura novaEscultura) {
 		esculturas.add(novaEscultura);
 	}
