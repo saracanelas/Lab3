@@ -52,6 +52,24 @@ GestorObra g = new GestorObra();
 				g.imprimirDetalhes();
 				break;
 				
+			case 3:
+				
+				input.nextLine(); //limpar o buffer
+				
+				System.out.println("Título da obra: ");
+				String titulo = input.nextLine();
+				
+				Obra encontrada = g.pesquisarTitulo(titulo);
+				if(encontrada!=null) {
+					System.out.println(encontrada);
+						
+					}
+				else {
+					System.out.println("Não foi encontrada nenhuma obra com esse nome");
+				}
+				break;
+				
+				
 			
 		}
 			
