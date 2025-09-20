@@ -46,6 +46,12 @@ GestorObra g = new GestorObra();
 				System.out.println("Obra adicionada com sucesso");
 				break;
 				
+			case 2:
+				
+				System.out.println("Catálogo das obras atuais");
+				g.imprimirDetalhes();
+				break;
+				
 			
 		}
 			
