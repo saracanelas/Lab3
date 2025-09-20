@@ -42,6 +42,8 @@ public class Pintura {
 		return "Pintura [tecnica=" + tecnica + ", oleos=" + oleos + "]";
 	}
 	
-	
+    public void registarPinturaOleo(PinturaOleo oleo) {
+        oleos.add(oleo);
+    }
 	
 }
