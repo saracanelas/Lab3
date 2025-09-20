@@ -69,6 +69,13 @@ GestorObra g = new GestorObra();
 				}
 				break;
 				
+			case 4:
+				
+				System.out.println("Tipo de tela: ");
+				String tipoTela = input.nextLine();
+				g.imprimirTela(tipoTela);
+				break;
+				
 				
 			
 		}
