@@ -76,6 +76,13 @@ GestorObra g = new GestorObra();
 				g.imprimirTela(tipoTela);
 				break;
 				
+			case 5:
+				
+				g.imprimirObras();
+				break;
+				
+				
+				
 				
 			
 		}
