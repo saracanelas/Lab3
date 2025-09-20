@@ -32,5 +32,26 @@ public class GestorObra {
 			  if (o.getAutor().equalsIgnoreCase(autor)) {
 				  return o;
 			  }
+		  return null;
 	  }
+	  
+	  public void imprimirDetalhes() {
+		  for (Obra o : obras)
+			  System.out.println(o);
+	  }
+	  
+		
+		  public void imprimirTela (String tipoTela) {
+		  
+		  for (Obra o : obras) { 
+			  if (o instanceof PinturaOleo) { 
+				  if (o.getTipoTela().equalsIgnoreCase(TipoTela)) { 
+					  System.out.println("Título: " + o.getTitulo() + "/nAutor: " + o.getAutor()); } } 
+			  if (o !instanceof PinturaOleo) {
+		  System.out.println("não foi encontrada nenhuma Pintura do tipo: " +  tipoTela); 
+			  	} 
+			  } 
+		  }
+		 
+	  
 }
