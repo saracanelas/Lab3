@@ -22,6 +22,20 @@ public class Pintura {
 		this.tecnica = tecnica;
 		this.oleos = oleos;
 	}
+
+	/**
+	 * @return the tecnica
+	 */
+	public String getTecnica() {
+		return tecnica;
+	}
+
+	/**
+	 * @return the oleos
+	 */
+	public ArrayList<PinturaOleo> getOleos() {
+		return oleos;
+	}
 	
 	
 }
