@@ -24,4 +24,9 @@ public class Escultura {
 		return material;
 	}
 
+	@Override
+	public String toString() {
+		return "Escultura [material=" + material + "]";
+	}
+
 }

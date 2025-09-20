@@ -21,6 +21,11 @@ public class PinturaOleo {
 	public String getTipoTela() {
 		return tipoTela;
 	}
+
+	@Override
+	public String toString() {
+		return "PinturaOleo [tipoTela=" + tipoTela + "]";
+	}
 	
 	
 }

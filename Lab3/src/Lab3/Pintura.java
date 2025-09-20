@@ -36,6 +36,12 @@ public class Pintura {
 	public ArrayList<PinturaOleo> getOleos() {
 		return oleos;
 	}
+
+	@Override
+	public String toString() {
+		return "Pintura [tecnica=" + tecnica + ", oleos=" + oleos + "]";
+	}
+	
 	
 	
 }
