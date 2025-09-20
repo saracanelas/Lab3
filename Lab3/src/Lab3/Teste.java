@@ -26,7 +26,7 @@ GestorObra g = new GestorObra();
 			System.out.println("3. Pesquisar por obra");
 			System.out.println("4. Imprimir detalhes de obras por tela");
 			System.out.println("5. Imprimir todos os detalhes de todas as obras de arte agrupadas por tipo, indicando o número total de cada tipo");
-			System.out.println("6. Sair");
+			System.out.println("0. Sair");
 			System.out.println("Opção: ");
 			opção = input.nextInt();
 			
@@ -57,9 +57,9 @@ GestorObra g = new GestorObra();
 				input.nextLine(); //limpar o buffer
 				
 				System.out.println("Título da obra: ");
-				String titulo = input.nextLine();
+				String titulo1 = input.nextLine();
 				
-				Obra encontrada = g.pesquisarTitulo(titulo);
+				Obra encontrada = g.pesquisarTitulo(titulo1);
 				if(encontrada!=null) {
 					System.out.println(encontrada);
 						
@@ -81,7 +81,14 @@ GestorObra g = new GestorObra();
 				g.imprimirObras();
 				break;
 				
+			case 0:
 				
+				System.out.println("A sair...");
+				break;
+				
+			default:
+				
+				System.out.println("Opção inválida");
 				
 				
 			
@@ -90,7 +97,7 @@ GestorObra g = new GestorObra();
 			
 		
 	
-		}			
+		}while (opção!=0);			
 	
 
 	}
