@@ -14,6 +14,13 @@ public class PinturaOleo {
 	public PinturaOleo(String tipoTela) {
 		this.tipoTela = tipoTela;
 	}
+
+	/**
+	 * @return the tipoTela
+	 */
+	public String getTipoTela() {
+		return tipoTela;
+	}
 	
 	
 }
