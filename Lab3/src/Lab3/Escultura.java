@@ -16,5 +16,12 @@ public class Escultura {
 	public Escultura(String material) {
 		this.material = material;
 	}
-	
+
+	/**
+	 * @return the material
+	 */
+	public String getMaterial() {
+		return material;
+	}
+
 }
