@@ -17,7 +17,6 @@ public class GestorObra {
 		  }
 	 
 	
-	
 	  public Obra pesquisarTitulo (String titulo) { 
 		  for (Obra o : obras) 
 			  if (o.getTitulo().equalsIgnoreCase(titulo)) {
