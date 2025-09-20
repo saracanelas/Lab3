@@ -30,6 +30,25 @@ GestorObra g = new GestorObra();
 			System.out.println("Opção: ");
 			opção = input.nextInt();
 			
+			switch(opção) {
+			case 1:
+				input.nextLine(); //limpar o buffer
+				
+				System.out.println("Título da obra a registar: ");
+				String titulo = input.nextLine();
+				System.out.println("Autor: ");
+				String autor = input.nextLine();
+				System.out.println("Ano de criação: ");
+				int data = input.nextInt();
+				Obra o = new Obra(titulo,autor,data);
+				
+				g.adicionarObra(o);
+				System.out.println("Obra adicionada com sucesso");
+				break;
+				
+			
+		}
+			
 			
 		
 	
