@@ -64,9 +64,9 @@ GestorObra g = new GestorObra();
 				System.out.println("Título da obra: ");
 				String titulo1 = input.nextLine();
 				
-				Obra encontrada = g.pesquisarTitulo(titulo1);
-				if(encontrada!=null) {
-					System.out.println(encontrada);
+				Obra o = g.pesquisarTitulo(titulo1);
+				if(o!=null) {
+					System.out.println(o);
 						
 					}
 				else {

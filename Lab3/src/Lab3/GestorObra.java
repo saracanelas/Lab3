@@ -56,7 +56,6 @@ public class GestorObra {
 	  
 		//imprimir pinturas a óleo consoante o tipo de tela
 	  public void imprimirTela (String tipoTela) {
-			  
 		  boolean encontrado = false;
 			  
 		  for (Obra o : obras) { 
@@ -69,8 +68,8 @@ public class GestorObra {
 				  } 
 		  		}
 			  
-			  if (!encontrado) {
-		  System.out.println("Não foi encontrada nenhuma Pintura do tipo: " +  tipoTela); 
+		  if (!encontrado) {
+			  System.out.println("Não foi encontrada nenhuma Pintura com o tipo de tela: " +  tipoTela); 
 			  	} 
 			   
 		  }
