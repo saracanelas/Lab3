@@ -2,7 +2,6 @@
  * 
  */
 package Lab3;
-import java.util.ArrayList;
 /**
  * 
  */
@@ -10,8 +9,7 @@ public class Obra {
 	private String titulo;
 	private String autor;
 	private int data;
-	private ArrayList <Pintura> pinturas;
-	private ArrayList <Escultura> esculturas;
+	
 	
 	/**
 	 * @param titulo
@@ -22,8 +20,7 @@ public class Obra {
 		this.titulo = titulo;
 		this.autor = autor;
 		this.data = data;
-		pinturas = new ArrayList <Pintura>;
-		esculturas = new ArrayList <Escultura>;
+	
 	}
 	/**
 	 * @return the autor
@@ -45,17 +42,10 @@ public class Obra {
 	}
 
 	
-	public void registarPintura(Pintura novaPintura) {
-		pinturas.add(novaPintura);
-	}
 	
-
-	public void registarEscultura(Escultura novaEscultura) {
-		esculturas.add(novaEscultura);
-	}
 	@Override
 	public String toString() {
-		return "Obra [titulo=" + titulo + ", autor=" + autor + ", data=" + data + "]";
+		return "Obra: Título=" + titulo + ", Autor= " + autor + ", Ano de criação= " + data;
 	}
 	
 }
