@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * 
  */
 public class GestorObra {
-	 private ArrayList <Obra>obras; 
+	 private ArrayList <Obra>obras = new ArrayList<>(); 
 	
 	
 	 //método para adicionar obras, confirmando se já existem 
