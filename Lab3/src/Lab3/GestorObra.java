@@ -70,7 +70,33 @@ public class GestorObra {
 			  } 
 		  }
 		  
-		  
+		  public void imprimirObras() {
+			  
+			  int totalPintura = 0;
+			  int totalEscultura = 0;
+			  int totalPinturaOleo = 0;
+			  
+			  for (Obra o : obras) {
+				  if (o instanceof Pintura) {
+					  System.out.println(o);
+					  totalPintura++;
+				  }
+				  
+				  if (o instanceof Escultura) {
+					  if (o instanceof Escultura) {
+						  System.out.println(o);
+						  totalEscultura++;
+					  }
+				  }
+				  
+				  if (o instanceof PinturaOleo) {
+					  System.out.println(o);
+					  totalPinturaOleo++;
+				  }
+			  
+			  }
 		 
 	  
+		  }
+	
 }
