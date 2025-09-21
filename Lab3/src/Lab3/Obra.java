@@ -12,6 +12,7 @@ public class Obra {
 	private int data;
 	private ArrayList <Pintura> pinturas;
 	private ArrayList <Escultura> esculturas;
+	
 	/**
 	 * @param titulo
 	 * @param autor

@@ -12,18 +12,28 @@ public class GestorObra {
 	 private ArrayList <Obra>obras; 
 	
 	
-	  public void adicionarObra(Obra o) { 
-		  obras.add(o); 
+	  public void adicionarObra(Obra obra) { 
+		  if (pesquisarTitulo(obra.getTitulo()) !=null) {
+			  return;
 		  }
+		  
+		  if (pesquisarAutor(obra.getAutor()) !=null) {
+			  return;
+		  }
+		  
+		  else {
+			  obras.add(obra);
+		  }
+	  }
 	 
 	
 	  public Obra pesquisarTitulo (String titulo) { 
-		  for (Obra o : obras) 
+		  for (Obra o : obras) {
 			  if (o.getTitulo().equalsIgnoreCase(titulo)) {
 				  return o; 
 				  }
-	  System.out.println("Obra não encontrada"); 
-	  return null; 
+			  }
+		  return null; 
 	  }
 	 
 	  public Obra pesquisarAutor (String autor) {
@@ -41,16 +51,52 @@ public class GestorObra {
 	  
 		
 		  public void imprimirTela (String tipoTela) {
-		  
+			  
+		  boolean encontrado = false;
+			  
 		  for (Obra o : obras) { 
+			  
 			  if (o instanceof PinturaOleo) { 
-				  if (o.getTipoTela().equalsIgnoreCase(TipoTela)) { 
-					  System.out.println("Título: " + o.getTitulo() + "/nAutor: " + o.getAutor()); } } 
-			  if (o !instanceof PinturaOleo) {
+				PinturaOleo p = (PinturaOleo) o; //conversão do objeto o para o tipo mais específico
+				  if (p.getTipoTela().equalsIgnoreCase(tipoTela)) { 
+					  System.out.println("Título: " + p.getTitulo() + "/nAutor: " + p.getAutor()); 
+					  encontrado = true;
+				  	} 
+				  } 
+			  
+			  if (!encontrado) {
 		  System.out.println("não foi encontrada nenhuma Pintura do tipo: " +  tipoTela); 
 			  	} 
 			  } 
 		  }
+		  
+		  public void imprimirObras() {
+			  
+			  int totalPintura = 0;
+			  int totalEscultura = 0;
+			  int totalPinturaOleo = 0;
+			  
+			  for (Obra o : obras) {
+				  if (o instanceof Pintura) {
+					  System.out.println(o);
+					  totalPintura++;
+				  }
+				  
+				  if (o instanceof Escultura) {
+					  if (o instanceof Escultura) {
+						  System.out.println(o);
+						  totalEscultura++;
+					  }
+				  }
+				  
+				  if (o instanceof PinturaOleo) {
+					  System.out.println(o);
+					  totalPinturaOleo++;
+				  }
+			  
+			  }
 		 
 	  
+		  }
+	
 }
