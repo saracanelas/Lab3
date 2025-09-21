@@ -57,15 +57,20 @@ public class GestorObra {
 		  for (Obra o : obras) { 
 			  
 			  if (o instanceof PinturaOleo) { 
-				PinturaOleo p = (PinturaOleo) o; //conversão  
-				  if (o.getTipoTela().equalsIgnoreCase(TipoTela)) { 
-					  System.out.println("Título: " + o.getTitulo() + "/nAutor: " + o.getAutor()); } } 
+				PinturaOleo p = (PinturaOleo) o; //conversão do objeto o para o tipo mais específico
+				  if (p.getTipoTela().equalsIgnoreCase(tipoTela)) { 
+					  System.out.println("Título: " + p.getTitulo() + "/nAutor: " + p.getAutor()); 
+					  encontrado = true;
+				  	} 
+				  } 
 			  
-			  if (o !instanceof PinturaOleo) {
+			  if (!encontrado) {
 		  System.out.println("não foi encontrada nenhuma Pintura do tipo: " +  tipoTela); 
 			  	} 
 			  } 
 		  }
+		  
+		  
 		 
 	  
 }
