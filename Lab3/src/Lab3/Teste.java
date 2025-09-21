@@ -42,8 +42,13 @@ GestorObra g = new GestorObra();
 				int data = input.nextInt();
 				Obra o = new Obra(titulo,autor,data);
 				
-				g.adicionarObra(o);
-				System.out.println("Obra adicionada com sucesso");
+				boolean adicionada = g.adicionarObra(o);
+				if(adicionada) {
+					System.out.println("Obra adicionada com sucesso");
+				}
+				else {
+					System.out.println("Não foi possível adicionar a obra: título ou autor já existente.");
+				}
 				break;
 				
 			case 2:
@@ -59,9 +64,9 @@ GestorObra g = new GestorObra();
 				System.out.println("Título da obra: ");
 				String titulo1 = input.nextLine();
 				
-				Obra encontrada = g.pesquisarTitulo(titulo1);
-				if(encontrada!=null) {
-					System.out.println(encontrada);
+				Obra o = g.pesquisarTitulo(titulo1);
+				if(o!=null) {
+					System.out.println(o);
 						
 					}
 				else {
