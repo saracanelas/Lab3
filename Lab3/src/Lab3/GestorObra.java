@@ -12,7 +12,8 @@ public class GestorObra {
 	 private ArrayList <Obra>obras; 
 	
 	
-	  public void adicionarObra(Obra obra) { 
+	 //método para adicionar obras, confirmando se já existem 
+	 public void adicionarObra(Obra obra) { 
 		  if (pesquisarTitulo(obra.getTitulo()) !=null) {
 			  return;
 		  }
@@ -27,7 +28,8 @@ public class GestorObra {
 	  }
 	 
 	
-	  public Obra pesquisarTitulo (String titulo) { 
+	 //Pesquisar obras por título 
+	 public Obra pesquisarTitulo (String titulo) { 
 		  for (Obra o : obras) {
 			  if (o.getTitulo().equalsIgnoreCase(titulo)) {
 				  return o; 
@@ -36,7 +38,8 @@ public class GestorObra {
 		  return null; 
 	  }
 	 
-	  public Obra pesquisarAutor (String autor) {
+	 //Pesquisar obras por autor 
+	 public Obra pesquisarAutor (String autor) {
 		  for (Obra o : obras)
 			  if (o.getAutor().equalsIgnoreCase(autor)) {
 				  return o;
@@ -44,33 +47,35 @@ public class GestorObra {
 		  return null;
 	  }
 	  
+	 //imprimir todos os detalhes de todas as obras
 	  public void imprimirDetalhes() {
 		  for (Obra o : obras)
 			  System.out.println(o);
 	  }
 	  
-		
-		  public void imprimirTela (String tipoTela) {
+		//imprimir pinturas a óleo consoante o tipo de tela
+	  public void imprimirTela (String tipoTela) {
 			  
 		  boolean encontrado = false;
 			  
 		  for (Obra o : obras) { 
-			  
 			  if (o instanceof PinturaOleo) { 
-				PinturaOleo p = (PinturaOleo) o; //conversão do objeto o para o tipo mais específico
+				PinturaOleo p = (PinturaOleo) o; //conversão do objeto para aceder a métodos específicos da subclasse
 				  if (p.getTipoTela().equalsIgnoreCase(tipoTela)) { 
-					  System.out.println("Título: " + p.getTitulo() + "/nAutor: " + p.getAutor()); 
+					  System.out.println("Título: " + p.getTitulo() + "\nAutor: " + p.getAutor()); 
 					  encontrado = true;
 				  	} 
 				  } 
+		  		}
 			  
 			  if (!encontrado) {
-		  System.out.println("não foi encontrada nenhuma Pintura do tipo: " +  tipoTela); 
+		  System.out.println("Não foi encontrada nenhuma Pintura do tipo: " +  tipoTela); 
 			  	} 
-			  } 
+			   
 		  }
-		  
-		  public void imprimirObras() {
+		
+	  //imprimir detalhes de todas as obras agrupadas por tipo
+	  public void imprimirObras() {
 			  
 			  int totalPintura = 0;
 			  int totalEscultura = 0;
