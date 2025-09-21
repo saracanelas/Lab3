@@ -81,25 +81,34 @@ public class GestorObra {
 			  int totalEscultura = 0;
 			  int totalPinturaOleo = 0;
 			  
+			  System.out.println("Pinturas a óleo");
 			  for (Obra o : obras) {
-				  if (o instanceof Pintura) {
-					  System.out.println(o);
-					  totalPintura++;
-				  }
-				  
-				  if (o instanceof Escultura) {
-					  if (o instanceof Escultura) {
-						  System.out.println(o);
-						  totalEscultura++;
-					  }
-				  }
-				  
 				  if (o instanceof PinturaOleo) {
 					  System.out.println(o);
 					  totalPinturaOleo++;
 				  }
+			  } 
+				  
+			  System.out.println("\nPinturas");
+			  for (Obra o: obras) {
+				  if (o instanceof Pintura && !(o instanceof PinturaOleo)) {
+					  System.out.println(o);
+					  totalPintura++;
+				  }
+			  } 
+				  
+			  System.out.println("\nEsculturas:");
+			  for(Obra o: obras) {
+				  if (o instanceof Escultura) {
+					  System.out.println(o);
+					  totalEscultura++;
+					 }
+				  
 			  
 			  }
+			  System.out.println("\nTotal Pinturas a Óleo: " + totalPinturaOleo);
+			  System.out.println("Total Pinturas: " + totalPintura);
+			  System.out.println("Total Esculturas: " + totalEscultura);
 		 
 	  
 		  }
