@@ -30,7 +30,7 @@ public class PinturaOleo extends Pintura {
 
 	@Override
 	public String toString() {
-		return super.toString() + "Tipo de Tela= " + tipoTela;
+		return super.toString() + " Tipo de Tela= " + tipoTela;
 		
 	}
 	

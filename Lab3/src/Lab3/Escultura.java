@@ -30,7 +30,7 @@ public class Escultura extends Obra {
 
 	@Override
 	public String toString() {
-		return super.toString() + "Material= " + material;
+		return super.toString() + " Material= " + material;
 	}
 
 }
