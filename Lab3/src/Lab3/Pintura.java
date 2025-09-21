@@ -34,7 +34,7 @@ public class Pintura extends Obra {
 
 	@Override
 	public String toString() {
-		return super.toString() + "Técnica= " + tecnica;
+		return super.toString() + " Técnica= " + tecnica;
 	}
 	
   
