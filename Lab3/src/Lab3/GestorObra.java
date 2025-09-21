@@ -13,17 +13,18 @@ public class GestorObra {
 	
 	
 	 //método para adicionar obras, confirmando se já existem 
-	 public void adicionarObra(Obra obra) { 
+	 public boolean adicionarObra(Obra obra) { 
 		  if (pesquisarTitulo(obra.getTitulo()) !=null) {
-			  return;
+			  return false;
 		  }
 		  
 		  if (pesquisarAutor(obra.getAutor()) !=null) {
-			  return;
+			  return false;
 		  }
 		  
 		  else {
 			  obras.add(obra);
+			  return true;
 		  }
 	  }
 	 
