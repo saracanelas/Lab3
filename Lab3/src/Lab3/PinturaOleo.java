@@ -1,6 +1,5 @@
 package Lab3;
 
-import java.util.ArrayList;
 
 /**
  * 
@@ -17,9 +16,8 @@ public class PinturaOleo extends Pintura {
 	 * @param oleos
 	 * @param tipoTela
 	 */
-	public PinturaOleo(String titulo, String autor, int data, String tecnica, ArrayList<PinturaOleo> oleos,
-			String tipoTela) {
-		super(titulo, autor, data, tecnica, oleos);
+	public PinturaOleo(String titulo, String autor, int data, String tecnica, String tipoTela) {
+		super(titulo, autor, data, tecnica);
 		this.tipoTela = tipoTela;
 	}
 
@@ -32,7 +30,8 @@ public class PinturaOleo extends Pintura {
 
 	@Override
 	public String toString() {
-		return "PinturaOleo [tipoTela=" + tipoTela + "]";
+		return super.toString() + "Tipo de Tela= " + tipoTela;
+		
 	}
 	
 	
