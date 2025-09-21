@@ -20,7 +20,7 @@ GestorObra g = new GestorObra();
 		int opção;
 		
 		do {
-			System.out.println("Bem vindo ao catálogo do Museu");
+			System.out.println("\nBem vindo ao catálogo do Museu");
 			System.out.println("1. Registar obra");
 			System.out.println("2. Imprimir todos os detalhes de todas as obras");
 			System.out.println("3. Pesquisar por obra");
@@ -34,13 +34,47 @@ GestorObra g = new GestorObra();
 			case 1:
 				input.nextLine(); //limpar o buffer
 				
+				System.out.println("Que tipo de obra deseja registar?");
+			    System.out.println("1 - Escultura");
+			    System.out.println("2 - Pintura");
+			    System.out.println("3 - Pintura a Óleo");
+			    
+			    int tipo = input.nextInt();
+			    input.nextLine(); // limpar buffer
+				
 				System.out.println("Título da obra a registar: ");
 				String titulo = input.nextLine();
 				System.out.println("Autor: ");
 				String autor = input.nextLine();
 				System.out.println("Ano de criação: ");
 				int data = input.nextInt();
-				Obra o = new Obra(titulo,autor,data);
+				input.nextLine(); //limpar o buffer
+				
+				Obra o = null;
+				
+				if(tipo==1) {
+					System.out.println("Material: ");
+					String material = input.nextLine();
+					o = new Escultura(titulo,autor,data,material);
+				}
+				
+				else if(tipo==2) {
+					System.out.println("Técnica: ");
+					String tecnica = input.nextLine();
+					o = new Pintura(titulo,autor,data,tecnica);
+				}
+				
+				else if(tipo==3) {
+					System.out.println("Técnica: ");
+					String tecnica = input.nextLine();
+					System.out.println("Tipo de tela:");
+					String tipoTela = input.nextLine();
+					o = new PinturaOleo(titulo,autor,data,tecnica,tipoTela);
+				}
+				
+				else {
+					System.out.println("Opção inválida");
+				}
 				
 				boolean adicionada = g.adicionarObra(o);
 				if(adicionada) {
@@ -52,7 +86,7 @@ GestorObra g = new GestorObra();
 				break;
 				
 			case 2:
-				
+								
 				System.out.println("Catálogo das obras atuais");
 				g.imprimirDetalhes();
 				break;
@@ -75,6 +109,8 @@ GestorObra g = new GestorObra();
 				break;
 				
 			case 4:
+				
+				input.nextLine(); //limpar o buffer
 				
 				System.out.println("Tipo de tela: ");
 				String tipoTela = input.nextLine();
