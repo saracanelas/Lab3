@@ -7,7 +7,6 @@ package Lab3;
  * 
  */
 
-import java.util.ArrayList;
 
 public class Pintura extends Obra {
 	private String tecnica;
@@ -25,7 +24,7 @@ public class Pintura extends Obra {
 	}
 
 	/**
-	 * @return the tecnica
+	 * @return the técnica
 	 */
 	public String getTecnica() {
 		return tecnica;
@@ -41,4 +40,4 @@ public class Pintura extends Obra {
   
     }
 	
-}
+
